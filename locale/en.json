@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Agent sound alerts",
+    "description": "Plays sound cues on the host computer when an agent finishes a task, the context overflows and is compacted, or the agent awaits an answer to a question."
+  }
+}

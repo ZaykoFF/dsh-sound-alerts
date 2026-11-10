@@ -1,0 +1,51 @@
+{
+  "name": "@zaykoff/dsh-sound-alerts",
+  "version": "1.4.2",
+  "description": "Sound cues: agent task completed, context overflow (compaction), agent waiting for an answer to a clarifying question",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "sounds/*.wav",
+    "icon.svg",
+    "README.md",
+    "scripts/make_sounds.py"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT",
+  "author": "Alexander Zaykov <xeroxkos@gmail.com> (https://github.com/ZaykoFF)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZaykoFF/dsh-sound-alerts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZaykoFF/dsh-sound-alerts/issues"
+  },
+  "homepage": "https://github.com/ZaykoFF/dsh-sound-alerts#readme",
+  "keywords": [
+    "dsh",
+    "dsh-bundle",
+    "deepseek-harness",
+    "cordis-plugin",
+    "sound",
+    "alerts",
+    "notifications"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.1 <0.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

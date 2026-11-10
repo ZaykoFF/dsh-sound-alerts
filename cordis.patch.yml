@@ -1,0 +1,29 @@
+# Sound cues for three agent situations.
+# The values below are the default config; override them in the profile's user
+# patch layer (cordis.patch.yml) by the entry id `agent-sound-alerts`.
+# Note: the profile layer REPLACES the config as a whole (it does not merge by
+# field); keys you omit fall back to the plugin's built-in defaults.
+- insert:
+    - id: agent-sound-alerts
+      name: '@zaykoff/dsh-sound-alerts'
+      config:
+        enabled: true
+        # Play cues for subagent (child) sessions too, not just main sessions.
+        includeSubagents: false
+        # Minimum interval between repeats of one cue, ms (anti-"machine-gun" guard on event bursts).
+        minIntervalMs: 1000
+        # true — play all three cues when the plugin activates (audio check).
+        testOnStart: false
+        # Gap between check cues, ms (the built-in cues are each under 1 s).
+        testGapMs: 2500
+        # Audio diagnostics: true — append events to debug.log next to index.js,
+        # or a string — a path of your own. Default: false.
+        debugLogFile: false
+        # Default sounds — light drum "taps" from this package's sounds/ directory
+        # (short muted hits with a fast pitch drop, peak ~-12 dBFS, no ringing).
+        # Override here with an absolute path to your own .wav, or switch a cue
+        # off with false:
+        # sounds:
+        #   taskDone: 'D:\Sounds\done.wav'
+        #   cacheOverflow: false
+        #   question: 'D:\Sounds\question.wav'
